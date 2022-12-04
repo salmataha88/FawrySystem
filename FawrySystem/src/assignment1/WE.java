@@ -1,10 +1,12 @@
 package assignment1;
 
-public class Vodafone implements ServiceProviders{
+public class WE implements ServiceProviders{
+
 	int amount ;
+
 	@Override 
 	public void run() {
-		System.out.println("vodafone is running..");
+		System.out.println("WE is running..");
 	}
 	
 	public int getAmount() {
@@ -20,8 +22,9 @@ public class Vodafone implements ServiceProviders{
 	}
 	@Override 
 	public void pay(Payment method) {
-		System.out.println("vodafone is running..");
 		int amount = getAmount();
 		method.pay(amount);
 	}
+	
+
 }
