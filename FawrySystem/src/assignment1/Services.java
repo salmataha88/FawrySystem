@@ -1,19 +1,9 @@
 package assignment1;
 
-public abstract class Services {
+public interface Services {
 	
-	 ServiceProviders serviceProviders;
+	public  void execute();
+	public ServiceProviders chooseProviders(String provider);
+	public void setPayment(String method);
 	
-	
-	public ServiceProviders getServiceProviders() {
-		return serviceProviders;
-	}
-
-	public void setServiceProviders(ServiceProviders serviceProviders) {
-		this.serviceProviders = serviceProviders;
-	}
-
-	public abstract void execute();
-	
-
 }
