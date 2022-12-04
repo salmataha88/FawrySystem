@@ -9,9 +9,9 @@ public class CreditCard implements Payment{
 	
 	
 	public CreditCard() {
-		System.out.print("Enter you info..");
+		System.out.println("Enter you info..");
 	}
-	public CreditCard(String password, String expireDate, int iD) {
+	public CreditCard(String expireDate, String password , int iD) {
 		this.password = password;
 		this.expireDate = expireDate;
 		this.ID = iD;
@@ -44,13 +44,12 @@ public class CreditCard implements Payment{
 	@Override
 	public void pay(int Amount) {
 		if(Amount >0 ) {
-			System.out.print("Successed..");
+			System.out.println("Successed..");
 			creditAmount -= Amount;
 		}
 		else {
-			System.out.print("Failed..");
+			System.out.println("Failed..");
 		}
-		
 	}
 	
 
