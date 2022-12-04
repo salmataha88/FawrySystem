@@ -1,20 +1,10 @@
 package assignment1;
 
-public abstract class ServiceProviders {
+public interface ServiceProviders {
 	
-	Payment payment;
+	public void run() ;
 	
-	public void setPayment(Payment payment) {
-		this.payment = payment;
-	}
-
-	public  void run() {
-		System.out.print("sal");
-	};
-	
-	public void getData(String mobile , int amount) {
-		System.out.print(mobile +" " + amount);
-	}
-	
+	public void getData(String mobile , int amount) ;
+	public  void pay(Payment method);
 
 }
