@@ -24,7 +24,7 @@ public class DonationForm implements Form {
 	public void formHandler() {
 		System.out.println("Enter your Place: ");
 		place = input.nextLine();
-		System.out.println("Choose Donation: ");
+		System.out.println("Choose number of Donation: ");
 		System.out.println("1.Schools " + "\n" + "2.NGOS" + "\n3.Cancer");
 		choice = input.nextInt();
 		setChoice(choice);
@@ -40,7 +40,7 @@ public class DonationForm implements Form {
 	
 	@Override
 	public void run() {
-		System.out.println("Landline Form..");
+		System.out.println("Donation Form..");
 		
 	}
 	

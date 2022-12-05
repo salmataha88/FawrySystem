@@ -8,7 +8,7 @@ public class Mobile_InternetForm implements Form{
 	private String mobile;
 	private  int amount;
 	private String providerChoice;
-	private ServiceProviders serviceProviders;
+	public ServiceProviders serviceProviders;
 	
 	public Mobile_InternetForm() {
 		this.formHandler();
@@ -25,10 +25,11 @@ public class Mobile_InternetForm implements Form{
 	public void formHandler() {
 		System.out.println("Enter your Mobile number: ");
 		mobile = input.nextLine();
-		System.out.println("Choose Provider:");
+		System.out.println("Write your Provider:");
 		System.out.println("1.Vodafone" +"\n2.WE" +"\n3.Etisalat" +"\n4.Orange");
 		providerChoice = input.nextLine();
-		this.serviceProviders = ProviderFactory.chooseServiceProviders(providerChoice);
+		serviceProviders = ProviderFactory.chooseServiceProviders(providerChoice);
+		serviceProviders.run();
 		System.out.println("Enter your Amount: ");
 		amount = input.nextInt();
 		paymentSystem.PayMethod(amount);
