@@ -6,6 +6,10 @@ public class PaymentFactory {
 		if(method == "credit card") {
 			return new CreditCard();
 		}
+		else if (method == "cash")
+			return new Cash();
+		else if (method == "wallet")
+			return new Wallet();
 		
 		return null;
 	}
