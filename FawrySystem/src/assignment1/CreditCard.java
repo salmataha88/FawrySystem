@@ -5,6 +5,8 @@ public class CreditCard implements Payment{
 	private String expireDate;
 	private String CardNumber;
 	private int creditAmount = 5000;
+	private int balance;
+	private Wallet wallet;
 	
 	
 	public CreditCard() {
@@ -43,9 +45,9 @@ public class CreditCard implements Payment{
 		}
 	}
 	
-	public void getfromWallet(int amount){
-		
-		
+	public void addFundsToWallet(int funds){
+		wallet.addFunds(funds);
+		creditAmount-=funds;
 	}
 	
 
