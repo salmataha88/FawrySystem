@@ -36,13 +36,19 @@ public class Donation extends Services {
 	}
 
 	public void setDonations() {
-		int donation =((LandlineForm)form).getChoice();
-		if(donation == 1)
+		int donation =((DonationForm)form).getChoice();
+		if(donation == 1) {
 			this.donationServices = new Schools();
-		else if(donation == 2)
+			this.donationServices.execute();
+		}
+		else if(donation == 2) {
 			this.donationServices = new NGOS();
-		else if(donation == 3)
+			this.donationServices.execute();
+		}
+		else if(donation == 3) {
 			this.donationServices = new Cancer();
+			this.donationServices.execute();
+		}
 	}
 
 	

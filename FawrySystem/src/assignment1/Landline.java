@@ -41,8 +41,11 @@ public class Landline extends Services {
 			this.receiptServices = new MonthlyReceipt();
 			this.receiptServices.execute();
 		}		
-		else if(receipt == 2)
+		else if(receipt == 2) {
 			this.receiptServices = new QuarterReceipt();
+			this.receiptServices.execute();
+		}
+		
 	}
 
 
