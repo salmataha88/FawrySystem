@@ -1,4 +1,4 @@
-package assignment1;
+package ass1.payments;
 
 public class Cash implements Payment{
 

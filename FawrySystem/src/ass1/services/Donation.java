@@ -1,4 +1,7 @@
-package assignment1;
+package ass1.services;
+
+import ass1.forms.DonationForm;
+import ass1.forms.Form;
 
 public class Donation extends Services {
 	

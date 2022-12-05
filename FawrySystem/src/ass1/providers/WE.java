@@ -1,4 +1,4 @@
-package assignment1;
+package ass1.providers;
 
 public class WE implements ServiceProviders{
 

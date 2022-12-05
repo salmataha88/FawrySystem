@@ -1,4 +1,4 @@
-package assignment1;
+package ass1.payments;
 
 import java.util.Scanner;
 

@@ -1,23 +1,30 @@
-package assignment1;
+package ass1.forms;
 
 import java.util.Scanner;
 
-public class Mobile_InternetForm implements Form{
+import ass1.Discount;
+import ass1.OverallDiscount;
+import ass1.User;
+import ass1.providers.ProviderFactory;
+import ass1.providers.ServiceProviders;
+
+public class MobileForm implements Form{
 	
 	private static Scanner input = new Scanner(System.in);
 	private String mobile;
 	private  int amount;
 	private String providerChoice;
 	public ServiceProviders serviceProviders;
+	public Discount discount;
 	
-	public Mobile_InternetForm() {
+	public MobileForm() {
 		this.formHandler();
 	}
 	
 
 	@Override
 	public void run() {
-		System.out.println("Mobile and Internet Form..");
+		System.out.println("Mobile Form..");
 		
 	}
 
@@ -32,10 +39,18 @@ public class Mobile_InternetForm implements Form{
 		serviceProviders.run();
 		System.out.println("Enter your Amount: ");
 		amount = input.nextInt();
-		paymentSystem.PayMethod(amount);
+		discount = new OverallDiscount();
+		int newAmount = discount.applyDiscount(amount);
+		System.out.println("You have discount on this service..\n" + "Your amount now is " +newAmount);
+		paymentSystem.PayMethod(newAmount);
 		System.out.println("Enter your y or n if you want to refund: ");
 		String ans = input.next();
-		//refund
+		
+		if(ans.equals("y")) {
+			User user = new User(refund);
+			refund.setRefundBalance(newAmount);
+		}
+		else return; 
 	}
 	
 	

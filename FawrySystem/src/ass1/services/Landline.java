@@ -1,4 +1,7 @@
-package assignment1;
+package ass1.services;
+
+import ass1.forms.Form;
+import ass1.forms.LandlineForm;
 
 public class Landline extends Services {
 	

@@ -1,4 +1,4 @@
-package assignment1;
+package ass1.payments;
 
 public class Wallet implements Payment{
 	
@@ -10,7 +10,7 @@ public class Wallet implements Payment{
 
 	public void addFunds(int funds) {
 		balance += funds;
-		System.out.println("Process is succeessed..");
+		System.out.println("the funds is added..");
 	}
 
 	@Override

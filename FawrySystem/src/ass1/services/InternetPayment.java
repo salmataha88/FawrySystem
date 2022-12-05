@@ -1,4 +1,7 @@
-package assignment1;
+package ass1.services;
+
+import ass1.forms.Form;
+import ass1.forms.MobileForm;
 
 public class InternetPayment extends Services{
 
@@ -28,7 +31,7 @@ public class InternetPayment extends Services{
 
 	@Override
 	public Form createform() {
-		form = new Mobile_InternetForm();
+		form = new MobileForm();
 		return form;
 	}
 

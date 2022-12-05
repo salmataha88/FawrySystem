@@ -1,4 +1,4 @@
-package assignment1;
+package ass1.services;
 
 public class NGOS implements DonationServices {
 

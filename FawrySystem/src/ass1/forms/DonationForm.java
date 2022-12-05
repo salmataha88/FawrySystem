@@ -1,6 +1,8 @@
-package assignment1;
+package ass1.forms;
 
 import java.util.Scanner;
+
+import ass1.User;
 
 public class DonationForm implements Form {
 	private static Scanner input = new Scanner(System.in);
@@ -35,7 +37,11 @@ public class DonationForm implements Form {
 		String ans = input.next();
 		//refund
 		
-		
+		if(ans.equals("y")) {
+			User user = new User(refund);
+			refund.setRefundBalance(amount);
+		}
+		else return; 
 	}
 	
 	@Override

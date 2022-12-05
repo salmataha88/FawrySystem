@@ -1,6 +1,8 @@
-package assignment1;
+package ass1.forms;
 
 import java.util.Scanner;
+
+import ass1.User;
 
 public class LandlineForm implements Form{
 	
@@ -35,7 +37,11 @@ public class LandlineForm implements Form{
 		System.out.println("Enter your y or n if you want to refund: ");
 		String ans = input.next();
 		//refund
-		
+		if(ans.equals("y")) {
+			User user = new User(refund);
+			refund.setRefundBalance(amount);
+		} 
+		else return; 
 		
 	}
 	
