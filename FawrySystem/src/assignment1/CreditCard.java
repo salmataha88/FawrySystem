@@ -2,28 +2,21 @@ package assignment1;
 
 public class CreditCard implements Payment{
 	
-	private String password;
 	private String expireDate;
-	private int ID;
+	private String CardNumber;
 	private int creditAmount = 5000;
 	
 	
 	public CreditCard() {
-		System.out.println("Enter you info..");
+		
 	}
-	public CreditCard(String expireDate, String password , int iD) {
-		this.password = password;
+
+	public CreditCard(String expireDate, String cardNumber) {
+		super();
 		this.expireDate = expireDate;
-		this.ID = iD;
+		CardNumber = cardNumber;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
 
 	public String getExpireDate() {
 		return expireDate;
@@ -33,23 +26,26 @@ public class CreditCard implements Payment{
 		this.expireDate = expireDate;
 	}
 
-	public int getID() {
-		return ID;
+	public String getCardNumber() {
+		return CardNumber;
 	}
-
-	public void setID(int iD) {
-		ID = iD;
+	public void setCardNumber(String cardNumber) {
+		CardNumber = cardNumber;
 	}
-
 	@Override
 	public void pay(int Amount) {
 		if(Amount >0 ) {
-			System.out.println("Successed..");
+			System.out.println("Process is successed..");
 			creditAmount -= Amount;
 		}
 		else {
-			System.out.println("Failed..");
+			System.out.println("Process is Failed..");
 		}
+	}
+	
+	public void getfromWallet(int amount){
+		
+		
 	}
 	
 
