@@ -1,12 +1,50 @@
 package assignment1;
 
-public abstract class Donation implements Services {
+public class Donation extends Services {
+	
+	private String place;
+	private  int amount;
+	private DonationServices donationServices ;
+	
+		
+	public String getPlace() {
+		return place;
+	}
+
+	public void setPlace(String place) {
+		this.place = place;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+	
+
 	@Override
 	public void execute() {
-		System.out.println("Donations..");
+		System.out.println("Donation services are executed..");
 	}
-	public abstract void getData(String place , int amount) ;
-	public abstract void pay(Payment method);
+	
+	@Override
+	public Form createform() {
+		form = new DonationForm();
+		return form;
+	}
+
+	public void setDonations() {
+		int donation =((LandlineForm)form).getChoice();
+		if(donation == 1)
+			this.donationServices = new Schools();
+		else if(donation == 2)
+			this.donationServices = new NGOS();
+		else if(donation == 3)
+			this.donationServices = new Cancer();
+	}
+
 	
 
 }
